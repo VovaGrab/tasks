@@ -1,0 +1,22 @@
+function sumOfEvenNumbers(a, b) {
+   
+    if (a % 2 !== 0) {
+        a++;
+    }
+
+    let sumEven = 0;
+
+    
+    for (let i = a; i <= b; i += 2) {
+        sumEven += i;
+    }
+
+    return sumEven;
+}
+
+// Пример использования:
+const a = parseInt(prompt("Введите начало интервала (a):"));
+const b = parseInt(prompt("Введите конец интервала (b):"));
+
+const result = sumOfEvenNumbers(a, b);
+console.log("Сумма четных чисел в интервале [" + a + ", " + b + "]: " + result);
