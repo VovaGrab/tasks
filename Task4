@@ -1,0 +1,13 @@
+function ucFirst(str) {
+    // Проверяем, что строка не пуста
+    if (!str) {
+        return str;
+    }
+
+    // Преобразуем первый символ в верхний регистр и конкатенируем с остальной частью строки
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+// Пример использования:
+const result = ucFirst("вася");
+console.log(result); // Вася
