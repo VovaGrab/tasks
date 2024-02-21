@@ -1,0 +1,49 @@
+const numbers = [1, 2, 3, 4, 5];
+
+// 1. Используем цикл for
+console.log("Способ 1 (for):");
+for (let i = 0; i < numbers.length; i++) {
+    console.log(numbers[i]);
+}
+
+// 2. Используем цикл while
+console.log("Способ 2 (while):");
+let j = 0;
+while (j < numbers.length) {
+    console.log(numbers[j]);
+    j++;
+}
+
+// 3. Используем цикл do...while
+console.log("Способ 3 (do...while):");
+let k = 0;
+do {
+    console.log(numbers[k]);
+    k++;
+} while (k < numbers.length);
+
+// 4. Используем цикл for...in
+console.log("Способ 4 (for...in):");
+for (let index in numbers) {
+    console.log(numbers[index]);
+}
+
+// 5. Используем цикл for...of
+console.log("Способ 5 (for...of):");
+for (let value of numbers) {
+    console.log(value);
+}
+
+// 6. Используем метод forEach
+console.log("Способ 6 (forEach):");
+numbers.forEach(value => console.log(value));
+
+// 7. Используем метод map
+console.log("Способ 7 (map):");
+numbers.map(value => console.log(value));
+
+// Мнение: В большинстве случаев, использование forEach предпочтительнее, так как он более читаемый и удобный. Также, for...of и map могут быть удобными в различных ситуациях.
+
+// 8. Используем метод join
+console.log("Способ 8 (join):");
+console.log(numbers.join('\n'));
