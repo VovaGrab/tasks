@@ -1,0 +1,59 @@
+const numbers = [1, 5, 0, -5, 30, 100, -500, 0, 100, 55];
+
+// Функция для вывода чисел < 5
+const printNumbersLessThan5 = (arr) => {
+    console.log("Числа < 5:");
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < 5) {
+            console.log(arr[i]);
+        }
+    }
+};
+
+// Функция для нахождения позиций элементов с максимальным и минимальным значением
+const findMinMax = (arr) => {
+    let max = arr[0], min = arr[0];
+    let maxPositions = [], minPositions = [];
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+            maxPositions = [i];
+        } else if (arr[i] === max) {
+            maxPositions.push(i);
+        }
+
+        if (arr[i] < min) {
+            min = arr[i];
+            minPositions = [i];
+        } else if (arr[i] === min) {
+            minPositions.push(i);
+        }
+    }
+
+    console.log("Позиции элементов с максимальным значением:", maxPositions);
+    console.log("Позиции элементов с минимальным значением:", minPositions);
+};
+
+// Функция для сортировки массива по убыванию
+const sortArray = (arr) => {
+    const sortedArray = arr.slice().sort((a, b) => b - a);
+    console.log("Массив, отсортированный по убыванию:", sortedArray);
+};
+
+// Функция для вывода элементов массива, которые больше среднего арифметического
+const printElementsGreaterThanAverage = (arr) => {
+    const average = arr.reduce((sum, num) => sum + num, 0) / arr.length;
+    console.log("Элементы массива, которые больше среднего арифметического:");
+    arr.forEach(element => {
+        if (element > average) {
+            console.log(element);
+        }
+    });
+};
+
+// Вызов функции
+printNumbersLessThan5(numbers);
+findMinMaxPositions(numbers);
+sortArrayDescending(numbers);
+printElementsGreaterThanAverage(numbers);
