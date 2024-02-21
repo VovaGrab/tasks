@@ -1,0 +1,34 @@
+function sumInputNumbers() {
+    let numbers = [];
+    
+    while (true) {
+        let userInput = prompt("Введите число:");
+
+        // Проверяем, был ли ввод отменен
+        if (userInput === null) {
+            break;
+        }
+
+        // Преобразуем введенное значение в число
+        let number = parseFloat(userInput);
+
+        // Проверяем, является ли введенное значение числом
+        if (!isNaN(number)) {
+            numbers.push(number);
+        } else {
+            break;
+        }
+    }
+
+    // Суммируем элементы массива
+    let sum = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        sum += numbers[i];
+    }
+
+    return sum;
+}
+
+// Вызов функции
+let result = sumInputNumbers();
+console.log("Сумма введенных чисел:", result);
