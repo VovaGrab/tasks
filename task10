@@ -1,0 +1,15 @@
+const dividers = (number) => {
+    if (number <= 0) {
+        console.log("Число должно быть больше 0");
+        return;
+    }
+
+    console.log(`Делители числа ${number}:`);
+
+    for (let i = 1; i <= number; i++) {
+        if (number % i === 0) {
+            console.log(i);
+        }
+    }
+};
+
