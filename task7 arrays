@@ -1,0 +1,15 @@
+function extract(start, end) {
+    const Array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    
+    // Проверка на корректность введенных значений start и end
+    if (start < 0 || end < 0 || start > Array.length - 1 || end > Array.length - 1 || start > end) {
+        return "Некорректные значения start и/или end";
+    }
+
+    // Используем метод slice для извлечения подмассива
+    const eArray = Array.slice(start, end + 1);
+    
+    return eArray;
+}
+
+
