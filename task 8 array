@@ -1,0 +1,16 @@
+const colors = ["red", "green", "blue"];
+
+function checkColor(color) {
+  // Используем indexOf для поиска позиции цвета в массиве
+  const position = colors.indexOf(color);
+  
+  // Если цвет найден, вернем его позицию, иначе вернем -1
+  return position !== -1 ? position : -1;
+}
+
+// Пример использования
+const result1 = checkColor("red");
+console.log(result1); // Вывод: 0
+
+const result2 = checkColor("yellow");
+console.log(result2); // Вывод: -1
