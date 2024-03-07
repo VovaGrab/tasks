@@ -1,0 +1,12 @@
+const inputArray = [1, "a", 2, null, 3, undefined, 4, {}, 5, 6, "word", 7, 8, false, 9, 100];
+
+function filterNumbers(array) {
+  // Используем метод filter для отбора только числовых значений
+  const filteredArray = array.filter(item => typeof item === "number" && !isNaN(item));
+  
+  return filteredArray;
+}
+
+// Пример использования
+const result = filterNumbers(inputArray);
+console.log(result); // Вывод: [1, 2, 3, 4, 5, 6, 7, 8, 9]
