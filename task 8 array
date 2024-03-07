@@ -8,7 +8,7 @@ function checkColor(color) {
   return position !== -1 ? position : -1;
 }
 
-// Пример использования
+// Пример
 const result1 = checkColor("red");
 console.log(result1); // Вывод: 0
 
