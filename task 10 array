@@ -1,0 +1,15 @@
+const inputArray = [8, 7, 2, 2, 3, 4, 2, 5, 5, 6, 7, 8, 5, 9, 0, 1];
+
+function uniqueSorted(array) {
+  // Используем Set для удаления дубликатов и преобразуем его обратно в массив
+  const uniqueArray = Array.from(new Set(array));
+  
+  // Сортируем массив по возрастанию
+  const sortedArray = uniqueArray.sort((a, b) => a - b);
+  
+  return sortedArray;
+}
+
+
+const result = uniqueSorted(inputArray);
+console.log(result); // Вывод: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
