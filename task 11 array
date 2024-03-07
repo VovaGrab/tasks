@@ -1,0 +1,8 @@
+let colors = ["white", "blue", "yellow", "black", "red", "green"];
+
+let [firstColor, secondColor, ...otherColors] = colors;
+
+// Вывод
+console.log(firstColor);
+console.log(secondColor);
+console.log(otherColors);
